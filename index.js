@@ -1,4 +1,6 @@
+const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./src/template');
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -58,7 +60,17 @@ const promptUser = () => {
             type: 'checkbox',
             name: 'licenses',
             message: 'What licenses should the project have?',
-            choices: ['MIT', 'HTML', 'CSS']
+            choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3']
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Provide instructions on how to use your project'
+        },
+        {
+            type: 'input',
+            name: 'contribute',
+            message: 'Provide description on how to contribute to your project'
         },
         {
             type: 'input',
@@ -68,10 +80,23 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'install',
+            name: 'test',
             message: 'What command should be run to run tests?'
         }
-    ])
+    ]);
+};
+
+function writeToFile(fileName, data) {
+	fs.writeFile(fileName, data, (err) => {
+		if (err) {
+			console.log(err);
+			return;
+		}
+		console.log('README.md created!');
+	});
 }
 
 promptUser()
+    .then(data => generateMarkdown(data))
+    .then(markdown => writeToFile('./dist/README.md', markdown))
+    .catch(err => console.log(err));
