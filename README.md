@@ -19,6 +19,8 @@ Run npm install to install the required packages
 ## Usage
 In the command line, run node index and answer all of the prompts given in the terminal. A README.md file will then be created in the dist directory that the user can use.
 
+![Application video](./assets/READMEvideo.gif)
+
 ## License
 The project uses the MIT license
 

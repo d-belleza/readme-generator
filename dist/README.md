@@ -1,38 +1,38 @@
 
-    # README Generator
+# My project
 
-    ![MIT license badge](https://img.shields.io/badge/license-MIT-green.svg)
+![MIT license badge](https://img.shields.io/badge/license-MIT-green.svg)
 
-    ## Description
-    An application that uses the command-line to generate a README.md file using user input and the Inquirer package.
+## Description
+Project description
 
-    ## Table of Contents
-        * [Installation](#installation)
-        * [Usage](#usage)
-        * [License](#license)
-        * [Contributing](#contributing)
-        * [Testing](#testing)
-        * [Questions](#questions)
-        
-    ## Installation
-    Run npm install to install the required packages
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Testing](#testing)
+* [Questions](#questions)
+    
+## Installation
+npm i
 
-    ## Usage
-    In the command line, run node index and answer all of the prompts given in the terminal. A README.md file will then be created in the dist directory that the user can use.
+## Usage
+Project instructions
 
-    ## License
-    The project uses the MIT license
+## License
+The project uses the MIT license
 
-    ## Contributing
-    To contribute, please contact the repository owner.
+## Contributing
+Contribution instructions
 
-    ## Testing
-    No current tests
+## Testing
+npm test
 
-    ## Questions
-    Visit my Github
-    [d-belleza](https://github.com/d-belleza)
+## Questions
+Visit my Github
+[d-belleza](https://github.com/d-belleza)
 
-    Additional questions, please send an email at
-    [davidbelleza@gmail.com](mailto:davidbelleza@gmail.com)
+Additional questions, please send an email at
+[davidbelleza@gmail.com](mailto:davidbelleza@gmail.com)
     
