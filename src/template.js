@@ -1,24 +1,12 @@
 const generateMarkdown = data => {
-    const {
-        github,
-        email,
-        project,
-        description,
-        license,
-        usage,
-        contribute,
-        install,
-        test
-    } = data;
 
     return `
-    # ${project}
+    # ${data.project}
 
-    ![${license} license badge](https://img.shields.io/badge/license-${license}-green.svg)
+    ![${data.license} license badge](https://img.shields.io/badge/license-${data.license}-green.svg)
 
     ## Description
-
-    ${description}
+    ${data.description}
 
     ## Table of Contents
         * [Installation](#installation)
@@ -29,30 +17,26 @@ const generateMarkdown = data => {
         * [Questions](#questions)
         
     ## Installation
-
-    ${install}
+    ${data.install}
 
     ## Usage
-
-    ${usage}
+    ${data.usage}
 
     ## License
-
-    The project uses the following license:
-    ${license}
+    The project uses the ${data.license} license
 
     ## Contributing
-    ${contribute}
+    ${data.contribute}
 
     ## Testing
-    ${test}
+    ${data.test}
 
     ## Questions
     Visit my Github
-    [${github}](https://github.com/${github})
+    [${data.github}](https://github.com/${data.github})
 
     Additional questions, please send an email at
-    [${email}](mailto:${email})
+    [${data.email}](mailto:${data.email})
     `;
 }
 

@@ -57,9 +57,9 @@ const promptUser = () => {
             }
         },
         {
-            type: 'checkbox',
-            name: 'licenses',
-            message: 'What licenses should the project have?',
+            type: 'list',
+            name: 'license',
+            message: 'What license should the project have?',
             choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3']
         },
         {
